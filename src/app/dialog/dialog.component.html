@@ -1,0 +1,15 @@
+<kendo-dialog
+title="Please confirm"
+*ngIf="opened"
+(close)="close(false)"
+[minWidth]="250"
+[width]="450"
+>
+<p style="margin: 30px; text-align: center;">
+  Are you sure you want to delete the student?
+</p>
+<kendo-dialog-actions>
+  <button kendoButton (click)="close(false)">No</button>
+  <button kendoButton (click)="close(true)" primary="true">Yes</button>
+</kendo-dialog-actions>
+</kendo-dialog>
